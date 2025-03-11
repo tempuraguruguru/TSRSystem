@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href = "../../static/css/style.css">
+        <title>RapS</title>
+    </head>
+    <body>
+        <div class = "top-wrapper">
+            <h1>Topic Segments Recommend System</h1>
+            <h3>キーワード入力</h3>
+            <form method="post" action="/">
+                {% csrf_token %}
+                <label for = "input_value">いま興味のあるキーワードを入力してね</label>
+                <input type = "text" id = "input_value" name = "input_value" required>
+                <button type="submit">送信</button>
+            </form>
+        </div>
+
+        <div class = "audio-wrapper">
+            {% if high_probability_path %}
+                <div class = "audio-content">
+                    <div class = "audio-overall">
+                        <p>{{ high_probability_path }}</p>
+                        <audio id = "audio_player" controls preload = "loaded">
+                            <source src = "{{ high_probability_path }}" type = "audio/mp3">
+                            お使いのブラウザでは audio タグをサポートしていません。
+                        </audio>
+                    </div>
+                    <div class = "evaluate-content">
+                        <fieldset>
+                            <legend><s>入力したキーワードに関連していたか?</s></legend>
+                            <form method="post" action="/">
+                                {% csrf_token %}
+                                <div>
+                                    <input type = "radio" id = "yes" name = "yes" value = "yes"/>
+                                    <label for = "yes">はい</label>
+                                </div>
+                                <div>    
+                                    <input type = "radio" id = "no" name = "no" value = "no"/>
+                                    <label for = "no">いいえ</label>
+                                </div>
+                        </fieldset>
+                    </div>
+                    <div class = "next-button">
+                        <form method = "post" action = "/">
+                            {% csrf_token %}
+                            <button type = "submit" id = "next" name = "next">次へ</button>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+            {% if programs %}
+                <div class = "history-content">
+                    <h3>視聴履歴</h3>
+                    {% for key, value in programs.items %}
+                        <div class = "path">
+                            <p>{{ key }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <script src = "../../static/js/script.js"></script>
+    </body>
+</html>

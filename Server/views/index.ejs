@@ -1,0 +1,89 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "/static/style.css">
+    <title>Radio and Podcast Segment distribution System</title>
+</head>
+
+<body>
+    <header>
+        <div class = "header-left">
+            <h2>Raps</h2>
+        </div>
+        <div class = "header-right">
+            <a href = "">
+                <h5>はじめる</h5>
+            </a>
+        </div>
+    </header>
+    <h3 class = "user-list-title">登録アーティスト名一覧</h3>
+    <ul class="user-list">
+        <% for (const user of users) { %>
+            <li class="user-name" id = "<%= user %>"><%= user %></li>
+        <% } %>
+    </ul>
+    <div class = "button-text">
+        <div class = "input">
+            <p class = "button-text-title">新しいアーティストを追加</p>
+            <input type="text" class="input-text" />
+            <button class="send-button1">追加</button>
+        </div>
+        <div class = "delete">
+            <p class = "button-text-title">存在しているアーティストを削除</p>
+            <input type="text" class="delete-text" />
+            <button class="send-button2">削除</button>
+        </div>
+        <div class = "update">
+            <p class = "button-text-title">存在しているアーティストを変更</p>
+            <div class = "previous">
+                <p>変更元</p>
+                <input type="text" class="previous-text" />
+            </div>
+            <div class = "next">
+                <p>変更先</p>
+                <input type="text" class="next-text" />
+            </div>
+            <button class = "send-button3">変更</button>
+        </div>
+    </div>
+    <div class = "audio-section">
+        <audio src = "<%  %>"></audio>
+    </div>
+    <div class = "RepresentativeSongs">
+        <!-- <button class = "send-button">表示</button> -->
+        <div class = "artists-title">
+            <h3>登録アーティストのSpotify上位3曲</h3>
+        </div>
+        <div class = "artists">
+            <% for(let i = 0; i < (artists.length)/4; i++){ %>
+                <div class = "artist">
+                    <div class = "artist-name">
+                        <%=artists[4*i].toUpperCase() %>
+                    </div>
+                    <ul class = "artist-songs">
+                        <% for(let j = 0; j < 4; j++) { %>
+                            <% if(j % 4 != 0){ %>
+                                <li class = "artist-song">
+                                    <%=artists[4*i+j] %>
+                                </li>
+                            <% } %>
+                        <% } %>
+                    </ul>
+                </div>
+            <% } %>
+        </div>
+    </div>
+    <script src="/static/index.js" defer></script>
+    <footer>
+        <div class = "footer-left">
+            <a href = "https://github.com/tempuraguruguru/nodejs_lesson/tree/main/Server_test">作成者のGitHub</a>
+        </div>
+        <div class = "footer-right">非提供：法政大学情報科学部</div>
+    </footer>
+</body>
+
+</html>

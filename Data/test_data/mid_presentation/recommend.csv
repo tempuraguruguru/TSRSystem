@@ -1,0 +1,11 @@
+file_path,topics,topic_probability,stime,etime,play_time
+./././Data/test_data/mid_presentation/asairyo/20240824/split_audio_1_1.wav,145,0.001000011,56.2,61.46,5.259999999999998
+./././Data/test_data/mid_presentation/hanbureddazu/20240911/split_audio_6_1.wav,0,0.9088567,0.0,24.0,24.0
+./././Data/test_data/mid_presentation/hanbureddazu/20240911/split_audio_6_1.wav,0,0.95463544,116.0,289.037,173.03699999999998
+./././Data/test_data/mid_presentation/nodayojiro/20240912/split_audio_1_1.wav,145,0.86755586,0.0,58.82,58.82
+./././Data/test_data/mid_presentation/nodayojiro/20240912/split_audio_1_1.wav,145,0.70458347,238.26,309.46,71.19999999999999
+./././Data/test_data/mid_presentation/nodayojiro/20240912/split_audio_1_1.wav,145,0.50847226,419.18,512.94,93.76000000000005
+./././Data/test_data/mid_presentation/nodayojiro/20240912/split_audio_1_1.wav,145,0.9077739,597.96,712.36,114.39999999999998
+./././Data/test_data/mid_presentation/nodayojiro/20240912/split_audio_1_1.wav,145,0.2791939,819.78,891.7,71.92000000000007
+./././Data/test_data/mid_presentation/tibayuki/20240914/split_audio_10_2.wav,90,0.002,0.0,262.889,262.889
+./././Data/test_data/mid_presentation/yoasobi/20240909/split_audio_1_1.wav,145,8.661356e-06,39.2,906.426,867.226

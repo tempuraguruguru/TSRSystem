@@ -1,0 +1,39 @@
+.audio-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 25px;
+    column-gap: 5%;
+}
+
+.audio-content{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+    margin-left: 10px;
+}
+
+.audio-content .audio-overall, .audio-segment{
+    width: 100%;
+}
+
+.audio-wrapper .history-content{
+    width: 45%;
+    background-color: grey;
+    color: white;
+}
+
+.audio-wrapper .history-content h3{
+    padding-left: 25px;
+}
+
+.audio-wrapper .history-content .path{
+    margin-left: 30px;
+    font-size: 12px;
+}
+
+.audio-wrapper .popup{
+    display: none;
+}

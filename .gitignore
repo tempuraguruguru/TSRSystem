@@ -1,0 +1,27 @@
+# 書類
+学部
+修士
+論文
+
+# Data
+*.wav
+*.mp3
+result
+whisper
+pip_list.rtf
+
+# Model
+Code/Model
+Code/program/.env
+test_trainer
+recommend.xlsx
+Code/*.xlsx
+Code/program/__pycache__
+
+# Server
+Server/node_modules/
+Server/.cache
+Server/.env
+
+# Django_Server
+Django_Server/myproject/static/audio

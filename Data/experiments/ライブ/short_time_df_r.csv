@@ -1,0 +1,2 @@
+file_path,topics,topic_probability,stime,etime,play_time,topic,nouns
+./././Data/test_data/mid_presentation/hoshinogen/20240910/split_audio_4_2.wav,49,0.9835983,0.0,122.82,122.82,49,"['ひな', '星野源', '日本', '音楽', '最後', '鼻毛', '金髪', '革命', '陽次郎', '年前', '番組', '源さん', '最高', '人生', '野田洋次郎', '遊び', 'ポッドキャスト', '皆さん', 'バカ', '場所', 'トイレ', '世界', 'ラジコ', 'ジャンル', 'ジクロ', '足腰', 'life', 'フェイタス', 'ある意味', '可能性']"
