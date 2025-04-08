@@ -44,8 +44,8 @@ def dic_to_list(dic):
     return res
 
 if __name__ == '__main__':
-    input = "音楽"
-    test = "チケット"
+    input = "ゴン＝フリークス"
+    test = "HUNTER×HUNTER"
 
     start = time.time()
     sample_vector = embed(input)
@@ -56,5 +56,5 @@ if __name__ == '__main__':
     print(f"Processing time: {end - start}")
 
 
-    strl = "['./././Data/test_data/mid_presentation/yamaguchiichiro/20240914/split_audio_72.wav','./././Data/test_data/mid_presentation/yamaguchiichiro/20240914/split_audio_72.wav',]"
-    print(eval(strl))
+    # strl = "['./././Data/test_data/mid_presentation/yamaguchiichiro/20240914/split_audio_72.wav','./././Data/test_data/mid_presentation/yamaguchiichiro/20240914/split_audio_72.wav',]"
+    # print(eval(strl))
